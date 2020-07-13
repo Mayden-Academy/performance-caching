@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <title>Performance Caching</title>
+    <script src="js/cat_facts.js"></script>
+    <script src="js/comparison.js" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<div id="performance">
+    <h2>Performance comparison</h2>
+
+    <div class="card-deck">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profile 1</h5>
+
+                <h6>Initial page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p1-1l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p1-1d">0.00s</strong></li>
+                </ul>
+
+                <h6>Subsequent page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p1-2l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p1-2d">0.00s</strong></li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">No Changes</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profile 2</h5>
+                <h6>Initial page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p2-1l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p2-1d">0.00s</strong></li>
+                </ul>
+
+                <h6>Subsequent page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p2-2l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p2-2d">0.00s</strong></li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Data cached</small>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Profile 3</h5>
+                <h6>Initial page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p3-1l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p3-1d">0.00s</strong></li>
+                </ul>
+
+                <h6>Subsequent page load:</h6>
+                <ul>
+                    <li>Load: <strong id="p3-2l">0.00s</strong></li>
+                    <li>DomContentLoaded: <strong id="p3-2d">0.00s</strong></li>
+                </ul>
+            </div>
+            <div class="card-footer">
+                <small class="text-muted">Files cached</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1>Cat Facts</h1>
+        </div>
+        <div class="col-4">
+            <img src="images/cat.jpg" class="cat" alt="Cat">
+        </div>
+        <div class="col-4">
+            <img src="images/cat2.jpg" class="cat" alt="Cat 2">
+        </div>
+        <div class="col-4">
+            <img src="images/cat.png" class="cat" alt="Cat 3">
+        </div>
+    </div>
+
+    <div class="row" id="catFacts">
+        <div class="col-12">
+            <h2>Cat Facts</h2>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+#performance {
+    position: fixed;
+    right: 30px;
+    top: 0;
+    width: 300px;
+    padding-left: 30px;
+    border-left: 1px solid #dddddd;
+}
+
+@media screen and (min-width: 1800px) {
+    #performance .card-deck {
+        display: block;
+        margin: 0;
+    }
+
+    #performance .card-deck .card {
+        margin: 0 0 15px 0;
+    }
+}
+
+@media screen and (max-width: 1800px) {
+    #performance {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: initial;
+        border: none;
+        border-top: 1px solid #dddddd;
+        width: 100%;
+        z-index: 10;
+        background: #ffffff;
+        padding-right: 30px;
+    }
+
+    #performance .card {
+        width: 33%;
+        margin-bottom: 15px;
+    }
+}
+
+
+#performance h2 {
+    margin-top: 20px;
+}
+
+.container {
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 50px;
+}
+
+.cat {
+    height: 380px;
+    margin-top: 20px
+}
+
+.card {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.card ul:last-child {
+    margin-bottom: 0;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+.card li:last-child {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
