@@ -6,6 +6,17 @@
     <title>Performance Caching</title>
     <script src="js/cat_facts.js" defer></script>
     <script src="js/comparison.js" defer></script>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('./serviceworker.js').then(function(registration) {
+                console.log('ServiceWorker registration successful!');
+            }).catch(function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        }
+    </script>
+
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -58,14 +69,14 @@
                 <h5 class="card-title">Profile 3</h5>
                 <h6>Initial page load:</h6>
                 <ul>
-                    <li>Load: <strong id="p3-1l">00ms</strong></li>
-                    <li>DomContentLoaded: <strong id="p3-1d">00ms</strong></li>
+                    <li>Load: <strong id="p3-1l">304ms</strong></li>
+                    <li>DomContentLoaded: <strong id="p3-1d">153ms</strong></li>
                 </ul>
 
                 <h6>Subsequent page load:</h6>
                 <ul>
-                    <li>Load: <strong id="p3-2l">00ms</strong></li>
-                    <li>DomContentLoaded: <strong id="p3-2d">00ms</strong></li>
+                    <li>Load: <strong id="p3-2l">141ms</strong></li>
+                    <li>DomContentLoaded: <strong id="p3-2d">24ms</strong></li>
                 </ul>
             </div>
             <div class="card-footer">
