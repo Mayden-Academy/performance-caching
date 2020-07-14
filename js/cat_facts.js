@@ -1,7 +1,7 @@
 
 
 (async function() {
-    const facts = await fetchData('catfacts.json');
+    const facts = await fetchData('https://dev.maydenacademy.co.uk/resources/CPS/catfacts.json');
     const factContainer = document.querySelector('#catFacts');
 
     facts.forEach((fact, i) => {
