@@ -1,7 +1,7 @@
 
 
 (async function() {
-    const response = await fetch('catfacts.json');
+    const response = await fetch('https://dev.maydenacademy.co.uk/resources/CPS/catfacts.json');
     const facts = await response.json();
     const factContainer = document.querySelector('#catFacts');
 
