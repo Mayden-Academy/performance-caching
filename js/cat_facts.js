@@ -1,11 +1,12 @@
 
 
 (async function() {
-    const facts = await fetchData('https://dev.maydenacademy.co.uk/resources/CPS/catfacts.json');
+    const facts = await fetchData('https://dev.io-academy.uk/resources/CPS/api.php');
     const factContainer = document.querySelector('#catFacts');
 
+    let output = ''
     facts.forEach((fact, i) => {
-        factContainer.innerHTML += `<div class="col-3">
+        output += `<div class="col-3">
             <div class="card">
                 <div class="card-body">
                     <h5 class="card-title">Cat fact ${++i}</h5>
@@ -14,6 +15,7 @@
             </div>
         </div>`
     })
+    factContainer.innerHTML += output
 
 }())
 
